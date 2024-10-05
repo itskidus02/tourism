@@ -6,11 +6,11 @@ import Newsletter from "@/components/Newsletter";
 const Home = () => {
   return (
     <div>
-    <MarqueeDemo/>
-    <Countdown/>
-    <Newsletter/>
-<FooterDiv/>
-  </div>
+      <Countdown />
+      <MarqueeDemo />
+      <Newsletter />
+      <FooterDiv />
+    </div>
   );
 };
 
