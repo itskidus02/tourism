@@ -12,6 +12,7 @@ export default {
 			montserrat: ['Montserrat', 'sans-serif'],
 			fraunces: ['Fraunces', 'sans-serif'],
 			poppins: ['Poppins', 'sans-serif'],
+			bricolage: ['Bricolage Grotesque', 'sans-serif'],
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',

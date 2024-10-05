@@ -16,4 +16,7 @@
   .tourism-text {
     @apply hover:text-[#d7c7c7] transition-all duration-300;
   }
+  .title-text {
+    @apply text-lg md:text-2xl lg:text-4xl flex justify-start font-bricolage font-bold mb-3;
+  }
 }
