@@ -6,7 +6,7 @@ import ethbgblack from "../assets/icons/eth-bg-black.png";
 import { Button } from "./ui/button";
 const FooterDiv = () => {
   return (
-<div className="font-poppins text-xs md:text-sm lg:text-md">
+<div className="font-poppins bottom-0 text-xs md:text-sm lg:text-md">
 
       <div className="flex justify-center items-center flex-col gap-7">
         {/* logo */}
