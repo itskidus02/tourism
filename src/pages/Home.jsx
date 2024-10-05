@@ -1,8 +1,12 @@
+import { MarqueeDemo } from "@/components/magicui/MarqueeDemo";
 import React from "react";
-
+import FooterDiv from "@/components/FooterDiv";
 const Home = () => {
   return (
-  <h1>fgh</h1>
+    <div>
+    <MarqueeDemo/>
+<FooterDiv/>
+  </div>
   );
 };
 

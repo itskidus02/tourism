@@ -7,6 +7,12 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			palanquin: ['Palanquin', 'sans-serif'],
+			montserrat: ['Montserrat', 'sans-serif'],
+			fraunces: ['Fraunces', 'sans-serif'],
+			poppins: ['Poppins', 'sans-serif'],
+		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
