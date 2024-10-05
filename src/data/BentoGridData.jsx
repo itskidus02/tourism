@@ -2,7 +2,7 @@ import React from "react";
 import ertale from "../assets/images/ertale.jpg";
 import lalibela from "../assets/images/lalibela-bg.jpg";
 import dashen from "../assets/images/dashen.jpg";
-import denakil from "../assets/images/denail.jpg";
+import denakil from "../assets/images/denakil.jpg";
 import gondar from "../assets/images/gondar.jpg";
 import omo from "../assets/images/omo.jpg";
 import axum from "../assets/images/axum.jpg";
