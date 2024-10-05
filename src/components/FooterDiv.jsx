@@ -6,7 +6,8 @@ import ethbgblack from "../assets/icons/eth-bg-black.png";
 import { Button } from "./ui/button";
 const FooterDiv = () => {
   return (
-    <div className="font-poppins ">
+<div className="font-poppins text-xs md:text-sm lg:text-md">
+
       <div className="flex justify-center items-center flex-col gap-7">
         {/* logo */}
         <img src={ethbgblack} className="ethlogo" alt=""></img>
@@ -15,7 +16,6 @@ const FooterDiv = () => {
           <h1 className="tourism-text">Home</h1>
           <h1 className="tourism-text">About</h1>
           <h1 className="tourism-text">Places</h1>
-          <h1 className="tourism-text">Get in touch</h1>
           <h1 className="tourism-text">Ceremonies</h1>
         </div>
         {/* social */}
@@ -25,7 +25,7 @@ const FooterDiv = () => {
           <img src={linkedin} className="icon" alt="" />
         </div>
       </div>
-      <div className="flex border-t p-3 mt-7 justify-between items-center">
+      <div className="flex flex-col md:flex-row gap-3 border-t p-3 mt-7 justify-between items-center">
         {/* lang */}
         <div className="flex gap-2 items-center">
           <Button>English</Button> <h1 className="tourism-text">Amharic</h1>
