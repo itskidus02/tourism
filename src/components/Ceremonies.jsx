@@ -50,8 +50,8 @@ const Ceremonies = () => {
   };
 
   return (
-    <div>
-      <h1 className="title-text">Cultural ceremonies</h1>
+    <div className="mb-[3rem] ">
+      <h1 id="ceremony" className="title-text">Cultural ceremonies</h1>
       <div className="relative overflow-hidden">
         <div className="grid gap-2 lg:grid-cols-4 relative">
           {cardsData
@@ -88,11 +88,11 @@ const Ceremonies = () => {
       </div>
 
       <div className="flex justify-start items-center font-bricolage mb-5 gap-3">
-        <span>Explore more</span>
+        <span className="text-xl font-poppins">Explore more</span>
      
      <div className="flex justify-center gap-2">
         <button
-          className={` rounded-[5px] bg-[#AEF5A8] hover:bg-[#82FF80] px-2 py-1 ${
+          className={` rounded-[5px] ring-1 ring-[#0f172a] hover:bg-slate-200 transition-all duration-300 px-2 py-1 ${
             currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           onClick={handlePrev}
@@ -101,7 +101,7 @@ const Ceremonies = () => {
          <img src={arrowleft} className="icon" alt="" />
         </button>
         <button
-          className={` rounded-[5px] bg-[#AEF5A8] hover:bg-[#82FF80] px-2 py-1 ${
+          className={` rounded-[5px] ring-1 ring-[#0f172a] hover:bg-slate-200 transition-all duration-300 px-2 py-1 ${
             currentIndex >= cardsData.length - cardsPerPage
               ? "opacity-50 cursor-not-allowed"
               : ""

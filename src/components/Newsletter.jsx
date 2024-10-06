@@ -3,8 +3,9 @@ import newsletter from "../assets/images/bgnewsletter.jpg";
 import arrowright from "../assets/icons/arrowright.svg";
 const Newsletter = () => {
   return (
-    <div>
-      <div className="flex justify-center items-center mb-9 relative">
+    <div >
+      <div id="newsletter" className="flex justify-center items-center mb-9 relative">
+        
         <img
           src={newsletter}
           className="w-full h-[30rem] object-cover rounded-[10px] relative"

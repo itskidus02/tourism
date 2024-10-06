@@ -3,7 +3,7 @@ import BentoGridData from "../data/BentoGridData"; // Adjust path as necessary
 
 const Bento = () => {
   return (
-    <div>
+    <div id="destination">
       <h1 className="title-text">Demographic Destinations</h1>
 
       {/* First Row */}

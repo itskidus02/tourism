@@ -22,7 +22,7 @@ const BlurIn = ({
       transition={{ duration }}
       variants={combinedVariants}
       className={cn(
-        "mt-3 mb-3 text-2xl text-slate-900 font-bold text-center max-w-3xl mx-auto ",
+        "mt-3 mb-6 text-xl md:text-xl lg:text-2xl text-slate-900 font-bold text-center max-w-3xl mx-auto ",
         className
       )}>
       {word}

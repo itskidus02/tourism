@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -7,27 +8,40 @@ const Header = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  const handleSmoothScroll = (e) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start', // or 'center' or 'end'
+        inline: 'nearest' // or 'start' or 'end'
+      });
+    }
+  };
+  
 
   return (
     <header>
-      <nav className="bg-transparent absolute top-0 left-0 w-full border-gray-200 px-4 lg:px-6 py-2.5 z-50">
+      <nav className="bg-transparent  absolute top-0 left-0 w-full border-gray-200 px-4 lg:px-6 py-2.5 z-50">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="/" className="flex items-center">
             <img src={logo} className="mr-3 h-6 md:h-10 lg:h-16 " alt="Logo" />
           </a>
-          <div className="flex items-center lg:order-2">
-            <a
+          <div className="flex items-center gap-3 lg:order-2">
+            <Button
               href="#"
-              className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              className="bg-transparent ring-1 ring-white text-white hover:text-slate-900 hover:bg-white transition-all duration-300"
             >
               Log in
-            </a>
-            <a
+            </Button>
+            <Button
               href="#"
-              className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              className="hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Get started
-            </a>
+            </Button>
             <button
               onClick={toggleSidebar}
               type="button"
@@ -67,97 +81,60 @@ const Header = () => {
           >
             <div className="flex justify-between items-center p-4 border-b">
               <span className="font-bold text-gray-700">Menu</span>
-              <button
+              <Button
                 onClick={toggleSidebar}
-                className="text-gray-700 hover:text-gray-900"
+                className=""
               >
                 Cancel
-              </button>
+              </Button>
             </div>
             <ul className="flex flex-col mt-4 p-4 space-y-4 font-medium">
-              <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Home
+            <li>
+                <a href="#" className="">
+                  Things to do
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Company
+                <a href="#" className="">
+                  Ceremonies
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Marketplace
+                <a href="#" className=" ">
+                  Destination
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Team
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-primary-700"
-                >
-                  Contact
+                <a href="#" className="">
+                  Newsletter
                 </a>
               </li>
             </ul>
           </div>
           <div
-            className="hidden lg:flex lg:w-auto lg:order-1"
+            className="hidden text-white lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
           >
             <ul className="flex flex-row space-x-8 mt-0">
+              
               <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Home
+                <a href="#todo" onClick={handleSmoothScroll} className="text-white hover:text-slate-300 transition-all duration-300">
+                  Things to do
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Company
+                <a href="#ceremony" onClick={handleSmoothScroll} className="text-white hover:text-slate-300 transition-all duration-300">
+                  Ceremonies
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Marketplace
+                <a href="#destination" onClick={handleSmoothScroll} className="text-white hover:text-slate-300 transition-all duration-300">
+                  Destination
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Team
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-700 hover:text-primary-700">
-                  Contact
+                <a href="#newsletter" onClick={handleSmoothScroll} className="text-white hover:text-slate-300 transition-all duration-300">
+                  Newsletter
                 </a>
               </li>
             </ul>
