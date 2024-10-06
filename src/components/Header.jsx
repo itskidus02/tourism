@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="bg-transparent absolute top-0 left-0 w-full border-gray-200 px-4 lg:px-6 py-2.5 z-50">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="/" className="flex items-center">
-            <img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />
+            <img src={logo} className="mr-3 h-6 md:h-10 lg:h-16 " alt="Logo" />
           </a>
           <div className="flex items-center lg:order-2">
             <a
@@ -76,38 +76,59 @@ const Header = () => {
             </div>
             <ul className="flex flex-col mt-4 p-4 space-y-4 font-medium">
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Company
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Marketplace
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Team
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-gray-700 hover:text-primary-700">
+                <a
+                  href="#"
+                  className="block text-gray-700 hover:text-primary-700"
+                >
                   Contact
                 </a>
               </li>
             </ul>
           </div>
-          <div className="hidden lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <div
+            className="hidden lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
             <ul className="flex flex-row space-x-8 mt-0">
               <li>
                 <a href="#" className="text-gray-700 hover:text-primary-700">
