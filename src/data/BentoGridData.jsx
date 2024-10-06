@@ -17,45 +17,45 @@ const BentoGridData = [
   },
   {
     imageSrc: { lalibela },
-    title: "Savannah Wildlife",
+    title: "Lalibela",
     description:
-      "The vast savannahs are home to incredible wildlife, offering a unique experience in nature.",
+      "Lalibela is famed for its rock-hewn churches, an important pilgrimage site and a marvel of ancient Ethiopian architecture.",
   },
   {
     imageSrc: { dashen },
-    title: "Blue Lagoon",
+    title: "Dashen Mountains",
     description:
-      "This serene blue lagoon is a perfect getaway for relaxing and rejuvenating in crystal-clear waters.",
+      "Ras Dashen is the highest peak in Ethiopia, part of the Simien Mountains, offering breathtaking views and challenging treks.",
   },
   {
     imageSrc: { denakil },
-    title: "Mountain Peaks",
+    title: "Denakil Depression",
     description:
-      "Discover the towering peaks and breathtaking vistas of the world's most beautiful mountain ranges.",
+      "The Danakil Depression is one of the hottest and lowest places on Earth, known for its otherworldly landscapes of salt flats, active volcanoes, and colorful sulfur springs.",
   },
   {
     imageSrc: { gondar },
-    title: "Desert Oasis",
+    title: "Gondar",
     description:
-      "A hidden paradise in the middle of a vast desert, offering a peaceful retreat for travelers.",
+      "Gondar is famed for its medieval castles and churches, particularly the Royal Enclosure, earning it the title Camelot of Africa.",
   },
   {
     imageSrc: { omo },
-    title: "Tropical Forest",
+    title: "Ommo Valley",
     description:
-      "Lush greenery and vibrant wildlife make this tropical forest a haven for nature lovers.",
+      "The Omo Valley is renowned for its diverse indigenous tribes and stunning landscapes, offering a rich cultural experience.",
   },
   {
     imageSrc: { axum },
-    title: "Modern Cityscape",
+    title: "Axum",
     description:
-      "Explore the vibrant culture, architecture, and energy of modern cities from around the world.",
+      "Once the capital of the ancient Aksumite Empire, Axum is famous for its towering obelisks and as the reputed home of the Ark of the Covenant.",
   },
   {
     imageSrc: { harar },
-    title: "Coastal Paradise",
+    title: "Harar City",
     description:
-      "White sandy beaches and turquoise waters make this coastal paradise an idyllic destination.",
+      " Known for its historic walled city, Harar is a UNESCO World Heritage Site celebrated for its ancient Islamic architecture and vibrant cultural heritage.",
   },
 ];
 
