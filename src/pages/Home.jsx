@@ -7,9 +7,11 @@ import Bento from "@/components/Bento";
 import Ceremonies from "@/components/Ceremonies";
 import ToDo from "@/components/ToDo";
 import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 const Home = () => {
   return (
     <div>
+      <Header/>
       <Hero/>
       <ToDo/>
       <Ceremonies/>
