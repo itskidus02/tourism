@@ -5,9 +5,11 @@ import Countdown from "@/components/Countdown";
 import Newsletter from "@/components/Newsletter";
 import Bento from "@/components/Bento";
 import Ceremonies from "@/components/Ceremonies";
+import ToDo from "@/components/ToDo";
 const Home = () => {
   return (
     <div>
+      <ToDo/>
       <Ceremonies/>
       <Bento/>
       <Countdown />

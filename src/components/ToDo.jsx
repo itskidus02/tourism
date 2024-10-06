@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import coffe from "../assets/images/coffe.jpg";
+import hike from "../assets/images/hike.jpg";
 import meskel from "../assets/images/meskel.jpg";
-import ashenda from "../assets/images/ashenda.jpg";
-import adwa from "../assets/images/adwa.jpg";
-import timket from "../assets/images/timket.jpg";
-import irecha from "../assets/images/irecha.jpg";
+import run from "../assets/images/run.jpg";
+import food from "../assets/images/food.jpg";
+import wild from "../assets/images/wild.jpg";
+import omoo from "../assets/images/omoo.jpg";
 import arrowright from "../assets/icons/arrowright.svg";
 import arrowleft from "../assets/icons/arrowleft.svg";
-import { Button } from "./ui/button";
 
-const Ceremonies = () => {
+const ToDo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState("");
@@ -17,13 +16,14 @@ const Ceremonies = () => {
 
   // Updated card data with image paths
   const cardsData = [
-    { "id": 1, "title": "Timket", "description": "Timket celebrates the Epiphany with colorful processions and ceremonies marking the baptism of Jesus in the Jordan River.", image: timket },
-    { "id": 2, "title": "Coffee", "description": "A traditional ritual of coffee preparation and serving, emphasizing hospitality and socializing.", image: coffe },
-    { "id": 3, "title": "Meskel", "description": "Meskel commemorates the finding of the True Cross on which Jesus was crucified, celebrated with bonfires and religious ceremonies.", image: meskel },
-    { "id": 4, "title": "Adwa", "description": "Adwa celebrates Ethiopia's victory over Italian forces in 1896, symbolizing resilience and national pride.", image: adwa },
-    { "id": 5, "title": "Irrecha", "description": "Irrecha is a thanksgiving ceremony of the Oromo people, celebrating the end of the rainy season and offering gratitude to God.", image: irecha },
-    { "id": 6, "title": "Ashenda", "description": "Ashenda is a cultural festival celebrated primarily by the Tigray and Amhara ethnic groups, featuring music, dance, and colorful attire.", image: ashenda }
-  ]
+    { "id": 1, "title": "Mountain Hiking", "description": "A challenging and rewarding adventure exploring Ethiopia's stunning mountain landscapes.", image: hike },
+    { "id": 2, "title": "Ethiopian run", "description": "An exhilarating experience immersing in Ethiopia's vibrant running culture and scenic routes.", image: run },
+    { "id": 3, "title": "Cuisine", "description": "Delicious and diverse flavors of Ethiopian cuisine, reflecting rich cultural traditions and hospitality.", image: food },
+    { "id": 4, "title": "Wildlife", "description": "Encounters with Ethiopia's diverse wildlife and natural habitats, offering unique safari experiences.", image: wild },
+    { "id": 5, "title": "Omo Culture", "description": "Exploration of the unique cultural heritage and traditions of the Omo Valley communities.", image: omoo },
+    { "id": 6, "title": "Pilgrimage", "description": "Participation in Ethiopia's vibrant cultural festivals, featuring music, dance, and traditional attire.", image: meskel }
+  ];
+  
   
   // Function to handle the next card animation
   const handleNext = () => {
@@ -51,7 +51,7 @@ const Ceremonies = () => {
 
   return (
     <div>
-      <h1 className="title-text">Cultural ceremonies</h1>
+      <h1 className="title-text">Things Todo in Ethiopia</h1>
       <div className="relative overflow-hidden">
         <div className="grid gap-2 lg:grid-cols-4 relative">
           {cardsData
@@ -117,4 +117,4 @@ const Ceremonies = () => {
   );
 };
 
-export default Ceremonies;
+export default ToDo;

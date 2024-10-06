@@ -31,8 +31,8 @@ const Newsletter = () => {
                 placeholder="email"
                 className="p-1 px-[1rem] md:p-2 md:px-3 lg:p-2 lg:px-4 rounded-[5px] text-sm md:text-base lg:text-lg"
               />
-            <button className="bg-white flex justify-center items-center gap-3 px-2 md:px-3 lg:px-5 py-1 lg:py-2 rounded-[5px] text-black text-sm md:text-base lg:text-lg">
-  <span className="hidden sm:inline">Subscribe</span> {/* Hide text on small screens */}
+            <button className="bg-white hover:bg-[#E4E9E4] flex justify-center items-center gap-3 px-2 md:px-3 lg:px-5 py-1 lg:py-2 rounded-[5px] text-black text-sm md:text-base lg:text-lg">
+  <span className="hidden  sm:inline">Subscribe</span> {/* Hide text on small screens */}
   <img src={arrowright} className="icon" alt="" />
 </button>
 
