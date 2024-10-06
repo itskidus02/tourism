@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="bg-transparent absolute top-0 left-0 w-full border-gray-200 px-4 lg:px-6 py-2.5">
+      <nav className="bg-transparent absolute top-0 left-0 w-full border-gray-200 px-4 lg:px-6 py-2.5 z-50">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="/" className="flex items-center">
             <img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />
@@ -62,8 +62,8 @@ const Header = () => {
           </div>
           <div
             className={`${
-              isSidebarOpen ? "block" : "hidden"
-            } fixed top-0 right-0 z-40 h-full w-64 bg-white shadow-lg lg:hidden`}
+              isSidebarOpen ? "translate-x-0" : "translate-x-full"
+            } fixed top-0 right-0 z-50 h-full w-64 bg-white shadow-lg lg:hidden transform transition-transform duration-300 ease-in-out`}
           >
             <div className="flex justify-between items-center p-4 border-b">
               <span className="font-bold text-gray-700">Menu</span>
