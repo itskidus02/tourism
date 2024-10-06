@@ -1,11 +1,13 @@
 import React from "react";
 import newsletter from "../assets/images/bgnewsletter.jpg";
-import arrowright from "../assets/icons/arrowright.svg";
+import warrowright from "../assets/icons/warrowright.svg";
 const Newsletter = () => {
   return (
-    <div >
-      <div id="newsletter" className="flex justify-center items-center mb-9 relative">
-        
+    <div>
+      <div
+        id="newsletter"
+        className="flex justify-center items-center mb-9 relative"
+      >
         <img
           src={newsletter}
           className="w-full h-[30rem] object-cover rounded-[10px] relative"
@@ -32,11 +34,15 @@ const Newsletter = () => {
                 placeholder="email"
                 className="p-1 px-[1rem] md:p-2 md:px-3 lg:p-2 lg:px-4 rounded-[5px] text-sm md:text-base lg:text-lg"
               />
-            <button className="bg-white hover:bg-[#E4E9E4] flex justify-center items-center gap-3 px-2 md:px-3 lg:px-5 py-1 lg:py-2 rounded-[5px] text-black text-sm md:text-base lg:text-lg">
-  <span className="hidden  sm:inline">Subscribe</span> {/* Hide text on small screens */}
-  <img src={arrowright} className="icon" alt="" />
-</button>
-
+              <button className="bg-transparent ring-1 ring-white text-white hover:bg-white transition-all duration-300 flex justify-center items-center gap-3 px-2 md:px-3 lg:px-5 py-1 lg:py-2 rounded-[5px] hover:text-slate-900 text-sm md:text-base lg:text-lg">
+                <span className="hidden  sm:inline">Subscribe</span>{" "}
+                {/* Hide text on small screens */}
+                <img
+                  src={warrowright}
+                  className="icon md:hidden lg:hidden"
+                  alt=""
+                />
+              </button>
             </div>
           </div>
         </div>
