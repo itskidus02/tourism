@@ -28,7 +28,7 @@ const FooterDiv = () => {
       <div className="flex flex-col md:flex-row gap-3 border-t p-3 mt-7 justify-between items-center">
         {/* lang */}
         <div className="flex gap-2 items-center">
-          <button className="bg-[#AEF5A8] hover:bg-[#82FF80] px-4 py-2 rounded-[5px]">English</button> <h1 className="tourism-text">Amharic</h1>
+          <Button className="hover:ring-1 hover:ring-[0f172a] hover:bg-white hover:text-slate-900 px-4 py-2 rounded-[5px]">English</Button> <h1 className="tourism-text">Amharic</h1>
           <h1 className="tourism-text">Afaan Oromo</h1>
         </div>
         {/* copy */}
