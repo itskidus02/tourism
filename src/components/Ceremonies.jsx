@@ -29,7 +29,7 @@ const Ceremonies = () => {
       setTimeout(() => {
         setCurrentIndex(currentIndex + 1);
         setIsAnimating(false);
-      }, 300); // Match the animation duration
+      }, 400); // Match the animation duration
     }
   };
 
@@ -41,7 +41,7 @@ const Ceremonies = () => {
       setTimeout(() => {
         setCurrentIndex(currentIndex - 1);
         setIsAnimating(false);
-      }, 200); // Match the animation duration
+      }, 300); // Match the animation duration
     }
   };
 
@@ -49,32 +49,32 @@ const Ceremonies = () => {
     <div>
       <h1 className="title-text">Cultural ceremonies</h1>
       <div className="relative overflow-hidden">
-        <div className="grid gap-2 grid-cols-4 relative">
+        <div className="grid gap-2 lg:grid-cols-4 relative">
           {cardsData
             .slice(currentIndex, currentIndex + cardsPerPage) // Only show 4 cards
             .map((card, index) => (
               <div
                 key={card.id}
-                className={`flex justify-center items-center mb-2 relative group transition-transform duration-300 ${
+                className={`flex justify-center items-center mb-2 relative group transition-transform duration-400 ease-in-out ${
                   isAnimating
                     ? direction === "next"
                       ? "transform -translate-x-full" // Move left when going forward
                       : "transform translate-x-full" // Move right when going backward
                     : ""
                 }`}
-                style={{ transitionDelay: `${index * 0.05}s` }} // Add delay for staggered effect
+                style={{ transitionDelay: `${index * 0.1    }s` }} // Add delay for smoother staggered effect
               >
                 <img
                   src={adey}
-                  className="w-full h-[26rem] object-cover rounded-[10px] transition-transform duration-300"
+                  className="w-full h-[26rem] object-cover rounded-[10px] transition-transform duration-400 ease-in-out"
                   alt=""
                 />
-                <div className="absolute top-0 left-0 w-full h-full rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-4 text-white transition-all duration-300">
-                  <span className="text-5xl text-left font-bricolage block -mb-[1.8rem] transition-transform duration-300 group-hover:-translate-y-10">
+                <div className="absolute top-0 left-0 w-full h-full rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-400 ease-in-out bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4 text-white transition-all duration-400 ease-in-out">
+                  <span className="text-5xl text-left font-bricolage block -mb-[1.8rem] transition-transform duration-400 group-hover:-translate-y-10">
                     {card.title}
                   </span>
-                  <span className="opacity-0 group-hover:opacity-100 text-left transition-opacity duration-300 font-poppins block">
+                  <span className="opacity-0 group-hover:opacity-100 text-left transition-opacity duration-400 font-poppins block">
                     {card.description}
                   </span>
                 </div>
