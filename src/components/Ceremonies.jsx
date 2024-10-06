@@ -1,26 +1,30 @@
 import React, { useState } from "react";
-import adey from "../assets/images/adey.jpg";
+import coffe from "../assets/images/coffe.jpg";
+import meskel from "../assets/images/meskel.jpg";
+import ashenda from "../assets/images/ashenda.jpg";
+import adwa from "../assets/images/adwa.jpg";
+import timket from "../assets/images/timket.jpg";
+import irecha from "../assets/images/irecha.jpg";
+import arrowright from "../assets/icons/arrowright.svg";
+import arrowleft from "../assets/icons/arrowleft.svg";
+import { Button } from "./ui/button";
 
 const Ceremonies = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Track the first visible card
-  const [isAnimating, setIsAnimating] = useState(false); // Track if animation is happening
-  const [direction, setDirection] = useState(""); // Track the direction (next or back)
-  const cardsPerPage = 4; // Number of cards to show at once
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [direction, setDirection] = useState("");
+  const cardsPerPage = 4;
 
-  // Dummy card data for demonstration
+  // Updated card data with image paths
   const cardsData = [
-    { id: 1, title: "Title 1", description: "Description 1" },
-    { id: 2, title: "Title 2", description: "Description 2" },
-    { id: 3, title: "Title 3", description: "Description 3" },
-    { id: 4, title: "Title 4", description: "Description 4" },
-    { id: 5, title: "Title 5", description: "Description 5" },
-    { id: 6, title: "Title 6", description: "Description 6" },
-    { id: 7, title: "Title 7", description: "Description 7" },
-    { id: 8, title: "Title 8", description: "Description 8" },
-    { id: 9, title: "Title 9", description: "Description 8" },
-    { id: 10, title: "Title 10", description: "Description 8" },
-  ];
-
+    { "id": 1, "title": "Timket", "description": "Timket celebrates the Epiphany with colorful processions and ceremonies marking the baptism of Jesus in the Jordan River.", image: timket },
+    { "id": 2, "title": "Coffee", "description": "A traditional ritual of coffee preparation and serving, emphasizing hospitality and socializing.", image: coffe },
+    { "id": 3, "title": "Meskel", "description": "Meskel commemorates the finding of the True Cross on which Jesus was crucified, celebrated with bonfires and religious ceremonies.", image: meskel },
+    { "id": 4, "title": "Adwa", "description": "Adwa celebrates Ethiopia's victory over Italian forces in 1896, symbolizing resilience and national pride.", image: adwa },
+    { "id": 5, "title": "Irrecha", "description": "Irrecha is a thanksgiving ceremony of the Oromo people, celebrating the end of the rainy season and offering gratitude to God.", image: irecha },
+    { "id": 6, "title": "Ashenda", "description": "Ashenda is a cultural festival celebrated primarily by the Tigray and Amhara ethnic groups, featuring music, dance, and colorful attire.", image: ashenda }
+  ]
+  
   // Function to handle the next card animation
   const handleNext = () => {
     if (currentIndex < cardsData.length - cardsPerPage) {
@@ -62,19 +66,19 @@ const Ceremonies = () => {
                       : "transform translate-x-full" // Move right when going backward
                     : ""
                 }`}
-                style={{ transitionDelay: `${index * 0.1    }s` }} // Add delay for smoother staggered effect
+                style={{ transitionDelay: `${index * 0.1}s` }} // Add delay for smoother staggered effect
               >
                 <img
-                  src={adey}
-                  className="w-full h-[26rem] object-cover rounded-[10px] transition-transform duration-400 ease-in-out"
-                  alt=""
+                  src={card.image} // Use the dynamic image path
+                  className="w-full h-[26rem] font-bold object-cover rounded-[10px] transition-transform duration-400 ease-in-out"
+                  alt={card.title}
                 />
                 <div className="absolute top-0 left-0 w-full h-full rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-400 ease-in-out bg-gradient-to-t from-black to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4 text-white transition-all duration-400 ease-in-out">
                   <span className="text-5xl text-left font-bricolage block -mb-[1.8rem] transition-transform duration-400 group-hover:-translate-y-10">
                     {card.title}
                   </span>
-                  <span className="opacity-0 group-hover:opacity-100 text-left transition-opacity duration-400 font-poppins block">
+                  <span className="opacity-0 text-xs group-hover:opacity-100 text-left transition-opacity duration-400 font-poppins block">
                     {card.description}
                   </span>
                 </div>
@@ -83,18 +87,21 @@ const Ceremonies = () => {
         </div>
       </div>
 
-      <div className="flex justify-start mb-5 gap-3">
-        <button
-          className={`bg-green-300 px-4 py-2 ${
+      <div className="flex justify-start items-center font-bricolage mb-5 gap-3">
+        <span>Explore more</span>
+     
+     <div className="flex justify-center gap-2">
+        <Button
+          className={` rounded-[5px] px-2 py-1 ${
             currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           onClick={handlePrev}
           disabled={currentIndex === 0}
         >
-          Back
-        </button>
-        <button
-          className={`bg-rose-200 px-4 py-2 ${
+         <img src={arrowleft} className="icon" alt="" />
+        </Button>
+        <Button
+          className={` rounded-[5px] px-2 py-1 ${
             currentIndex >= cardsData.length - cardsPerPage
               ? "opacity-50 cursor-not-allowed"
               : ""
@@ -102,8 +109,9 @@ const Ceremonies = () => {
           onClick={handleNext}
           disabled={currentIndex >= cardsData.length - cardsPerPage}
         >
-          Next
-        </button>
+         <img src={arrowright} className="icon" alt="" />
+        </Button>
+        </div>
       </div>
     </div>
   );
