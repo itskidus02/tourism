@@ -90,22 +90,22 @@ const Header = () => {
             </div>
             <ul className="flex flex-col mt-4 p-4 space-y-4 font-medium">
             <li>
-                <a href="#" className="">
+                <a href="#todo" className="">
                   Things to do
                 </a>
               </li>
               <li>
-                <a href="#" className="">
+                <a href="#ceremony" className="">
                   Ceremonies
                 </a>
               </li>
               <li>
-                <a href="#" className=" ">
+                <a href="#destination" className=" ">
                   Destination
                 </a>
               </li>
               <li>
-                <a href="#" className="">
+                <a href="#newsletter" className="">
                   Newsletter
                 </a>
               </li>
