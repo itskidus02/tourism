@@ -12,7 +12,7 @@ const About = () => {
         className="absolute top-0 left-0 w-full h-screen bg-cover bg-no-repeat text-white "
         style={{
           backgroundImage:
-            "linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url('/src/assets/images/about-bg.jpg')",
+            "linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url('/assets/images/about-bg.jpg')",
         }}
       >
         <div className="max-w-7xl flex flex-col gap-3 font-bricolage text-left lg:p-9 m-4 lg:m-[4em] mt-[6rem]">
