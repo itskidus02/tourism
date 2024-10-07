@@ -25,7 +25,6 @@ const ToDo = () => {
   ];
   
   
-  // Function to handle the next card animation
   const handleNext = () => {
     if (currentIndex < cardsData.length - cardsPerPage) {
       setIsAnimating(true);
@@ -37,7 +36,6 @@ const ToDo = () => {
     }
   };
 
-  // Function to handle the previous card animation
   const handlePrev = () => {
     if (currentIndex > 0) {
       setIsAnimating(true);
@@ -45,7 +43,7 @@ const ToDo = () => {
       setTimeout(() => {
         setCurrentIndex(currentIndex - 1);
         setIsAnimating(false);
-      }, 300); // Match the animation duration
+      }, 300); 
     }
   };
 
@@ -55,21 +53,21 @@ const ToDo = () => {
       <div className="relative overflow-hidden">
         <div className="grid gap-2 lg:grid-cols-4 relative">
           {cardsData
-            .slice(currentIndex, currentIndex + cardsPerPage) // Only show 4 cards
+            .slice(currentIndex, currentIndex + cardsPerPage) 
             .map((card, index) => (
               <div
                 key={card.id}
                 className={`flex justify-center items-center mb-2 relative group transition-transform duration-400 ease-in-out ${
                   isAnimating
                     ? direction === "next"
-                      ? "transform -translate-x-full" // Move left when going forward
-                      : "transform translate-x-full" // Move right when going backward
+                      ? "transform -translate-x-full" 
+                      : "transform translate-x-full" 
                     : ""
                 }`}
-                style={{ transitionDelay: `${index * 0.1}s` }} // Add delay for smoother staggered effect
+                style={{ transitionDelay: `${index * 0.1}s` }} 
               >
                 <img
-                  src={card.image} // Use the dynamic image path
+                  src={card.image} 
                   className="w-full h-[26rem] font-bold object-cover rounded-[10px] transition-transform duration-400 ease-in-out"
                   alt={card.title}
                 />
