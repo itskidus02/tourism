@@ -1,8 +1,9 @@
 import FooterDiv from "@/components/FooterDiv";
-import Header from "@/components/Header";
+import Header from "@/components/AboutHeader";
 import { GradualSpacingabout } from "@/components/magicui/GradualSpacingabout";
 import React from "react";
 import { Link } from "react-router-dom"; 
+
 
 const About = () => {
   return (
