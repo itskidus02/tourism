@@ -7,7 +7,7 @@ import { BlurInDemo } from "./magicui/BlurInDemo";
 const Hero = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white font-poppins text-9xl z-10">
-      <div className="relative max-w-5xl font-bricolage mx-auto pt-[12rem] md:pt-[12rem] lg:pt-[1rem]">
+      <div className="relative max-w-5xl font-bricolage mx-auto pt-[1rem] md:pt-[1rem] lg:pt-[1rem]">
         <div className=" ">
           <GradualSpacingDemo />
         </div>
