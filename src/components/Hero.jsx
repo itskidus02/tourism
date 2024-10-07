@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom"; 
 import search from "../assets/icons/search.svg";
 import { GradualSpacingDemo } from "./magicui/GradualSpacingDemo";
 import { BlurInDemo } from "./magicui/BlurInDemo";
